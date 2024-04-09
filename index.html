@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0" />
+	
+	<title>This domain is currently not used for web purposes</title>
+	
+	<style>
+	html, body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	}
+	
+	body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	background-color: #f0f0f0;
+	font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	}
+	
+	body > div {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		user-select: none;
+	}
+	
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        body > div {
+            background-color: #363636;
+            color: #ffffff;
+        }
+    }
+	</style>
+</head>
+<body>
+<div>
+	<p id="message">This domain is currently not used for web purposes.</p>
+</div>
+<script>
+const locale = (navigator.language || nagivator.userLanguage).split("-")[0];
+const domMessage = document.getElementById( "message" );
+const messages = {
+es: "Este dominio no se utiliza actualmente para fines web",
+it: "Questo dominio non è attualmente utilizzato per scopi web",
+fr: "Ce domaine n'est actuellement pas utilisé à des fins Web",
+de: "Diese Domain wird derzeit nicht für Webzwecke verwendet",
+pl: "Ta domena nie jest aktualnie wykorzystywana do celów internetowych",
+nl: "Dit domein wordt op dit moment niet gebruikt voor webdoeleinden",
+pt: "Este domínio não é usado atualmente para fins web",
+sv: "Denna domän används för närvarande inte för webbändamål",
+ro: "Acest domeniu nu este utilizat în prezent în scopuri web",
+da: "Dette domæne bruges i øjeblikket ikke til webformål",
+fi: "Tätä verkkotunnusta ei tällä hetkellä käytetä verkkotarkoituksiin",
+is: "Þetta lén er ekki notað í nettilgangi eins og er",
+no: "Dette domenet brukes for øyeblikket ikke til nettbaserte formål",
+fy: "Dit domein wurdt op it stuit net brûkt foar webdoelen"
+};
+
+if( messages[locale] ) {
+	domMessage.innerHTML = messages[locale] + ".";
+	document.title = messages[locale];
+	document.documentElement.lang = locale;
+}
+</script>
+</body>
+</html>
